@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Seleccionar Fecha y Hora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-datetime
+    presentation="date-time"
+    value="2023-11-02T01:22:00"
+    locale="es-ES"
+    hour-cycle="h12"
+    [showDefaultButtons]="true"
+    [showDefaultTitle]="true"
+    [formatOptions]="{
+      date: { day: '2-digit', month: 'long' },
+      time: { hour: '2-digit', minute: '2-digit' }
+    }"
+  >
+    <span slot="title">Seleccione una fecha</span>
+    <span slot="time-label">Hora</span>
+  </ion-datetime>
+</ion-content>
